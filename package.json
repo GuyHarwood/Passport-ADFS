@@ -1,0 +1,20 @@
+{
+  "name": "Passport-ADFS",
+  "description": "POC for delegating auth to active directory on azure.",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "express": "~4.2.0",
+    "hjs": "~0.0.6",
+    "morgan": "~1.0.0",
+    "passport": "^0.2.0",
+    "passport-wsfed-saml2": "^0.16.1",
+    "static-favicon": "~1.0.0"
+  }
+}
