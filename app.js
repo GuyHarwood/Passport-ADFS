@@ -42,14 +42,14 @@ app.post('/login/callback',
 passport.use(new AdfsStrategy(
     {
         path: '/login/callback',
-        realm: 'f6097489-c3a7-40cd-a138-368076bbc0c6',
+        realm: '<clientId from azure portal>',
         homeRealm: '', // specify an identity provider to avoid showing the idp selector
-        identityProviderUrl: 'https://login.windows.net/e95889f4-718e-412f-a5b8-136f0b6d4b02/wsfed'
+        identityProviderUrl: ''
 
         // setup either a certificate base64 encoded (cer) or just the thumbprint of the certificate if public key is embedded in the signature
 
-        ,cert: 'MIICWTCCAcICCQDdb4l2Evr4CDANBgkqhkiG9w0BAQUFADBxMQswCQYDVQQGEwJVSzETMBEGA1UEBxMKTm90dGluZ2hhbTERMA8GA1UEChMITWlsa0NoaXAxFjAUBgNVBAMTDWV4cHJlc3MubG9jYWwxIjAgBgkqhkiG9w0BCQEWE2dwaGFyd29vZEBnbWFpbC5jb20wHhcNMTQwODA3MTMxNjM1WhcNMTUwODA3MTMxNjM1WjBxMQswCQYDVQQGEwJVSzETMBEGA1UEBxMKTm90dGluZ2hhbTERMA8GA1UEChMITWlsa0NoaXAxFjAUBgNVBAMTDWV4cHJlc3MubG9jYWwxIjAgBgkqhkiG9w0BCQEWE2dwaGFyd29vZEBnbWFpbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAK/WPpQtG4Iqk11jrt88U+68umiB+grwbqRZi4G28qsQAXepzpii85vMXYwZ9O2/z3xkRk6bbl4Tpm/nrs5W7E8+cpsIINEh7HpXv4LlB5KYaT+7HaUNcSGLaeLPimT/7ahPaCTghmIddag57AwCQFxMHAmVji+j2aEKifnyBZU1AgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAYnyg66tJ+h61/I8+6pxRiesWYipZmVt/l1WQqxEkkTOgDHzeQTOqi6wZ/WVkEwsOnFiNBaY0yHJWVHfPQAYoceREPYWqpQkmLS51mHvknT8qX7rs061ZvQCTO0apncCuYnxupguu11fwLr7dcUKI3I9rDLjRBzk7WqcyyNTIkQs='
-//        ,thumbprint: 'a3cff17cbf7e793a97861390eb698d00e9598537'
+        ,cert: '<cert body>'
+//        ,thumbprint: ''
     },
     function(profile, done) {
         console.log("Auth with", profile);
